@@ -1,0 +1,74 @@
+const message = 'hello';
+foo();
+function foo() {
+    alert(message);
+}
+alert(message) because we call function 
+
+===========================================================
+const message = 'hello';
+foo();
+function foo() {
+    let message = 'hi'
+    alert(message);
+} //it alert second message(hi)because it takes it from inside function
+===========================================================
+foo();
+const message = 'hello';
+function foo() {
+    alert(message);
+} //it didn't work becuse we call it before define message
+/===========================================================
+foo();
+function foo() {
+    alert(message);
+}
+var message = 'hello'; //alert undefined because it defines message after alert
+===========================================================
+if (true) {
+    let message = 'hello';
+}
+alert(message); //it didn't work becuse it defined after if condition
+===========================================================
+if (true) {
+    var message = 'hello';
+}
+alert(message);//it worked 
+===========================================================
+{
+    let message = 'hello';
+    message = 'hi';
+}
+alert(message);// undefined message becuse the message between block so it is not unversal*/
+===========================================================
+let message = 'hello';
+{
+    message = 'hi';
+}
+alert(message); // the second message (hi) worked becuse it defined just with = */
+===========================================================
+foo();
+function foo() {
+    {
+        const message = 'hello';
+    }
+    
+    alert(message);// it did not work because message not unversal and it has to call function
+}
+===========================================================
+oo();
+function foo() {
+    {
+        var message = 'hello';
+    }
+    
+    alert(message);// it worked  becuse it defined with var which like equal
+}
+==========================================================
+foo();
+function foo() {
+    {
+        var message = 'hello';
+    }
+}
+alert(message);// it did not work because it is between two curly brackets
