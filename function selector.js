@@ -1,23 +1,29 @@
 /* write a function called "isEven" that takes a number as a parameter and returns true 
 if the number is even and false otherwise.*/
 function isEven (num){
-  return num %2 == 0 ;
+  return num %2 === 0 ;
     }
    console.log(isEven(5));
 
 //.....................................................................................
 /*2. write a function called "getOdd" that takes an array of numbers as a parameter and returns 
 an array containing the odd numbers only. you must use the "isEven" function above.*/
-let nums = [0,8,7,5]
-function getOdd(nums){
-    let oddNums =[];
-    oddNums.forEach(i=>{if(isEven(i)==0){
-        oddNums.push(i);
-    }
-    })
-return oddNums;
-}
-//document.write(getOdd(nums))
+  
+  let nums = [0,8,7,1,5]
+  
+  function getOdd(nums){
+     const oddNums =[];
+      for( let i=0;i<nums.length;i++){
+          
+          if(!isEven (nums[i])){
+              oddNums.push(nums[i]);
+    
+    } 
+} return oddNums ;
+ }
+  
+//console.log(getOdd(nums))
+
 
 //..................................................................................
 
